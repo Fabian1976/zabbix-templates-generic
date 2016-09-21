@@ -1,2 +1,2 @@
 # zabbix-templates-generic
-Some generic Zabbix templates
+Some generic Zabbix templates. Mainly used for process monitoring.
