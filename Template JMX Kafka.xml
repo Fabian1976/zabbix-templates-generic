@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.2</version>
-    <date>2017-09-05T08:41:03Z</date>
+    <date>2017-09-05T11:23:15Z</date>
     <groups>
         <group>
             <name>Kafka servers</name>
@@ -18,9 +18,6 @@
                 </group>
             </groups>
             <applications>
-                <application>
-                    <name>Kafka</name>
-                </application>
                 <application>
                     <name>Kafka broker statistics</name>
                 </application>
