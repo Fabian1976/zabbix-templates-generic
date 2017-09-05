@@ -1,0 +1,15 @@
+Importeer Template Virt oVirt Guest
+Importeer Template Virt oVirt
+
+Zorg dat de rhev/oVirt manager in Zabbix geregistreerd is en dat er een Zabbix agent draait
+
+Plaats userparameter_ovirt inclusief script ovirt_stats.py op de rhev/oVirt manager.
+Zorg dat de ovirtsdk geïnstalleerd is (pip install ovirt-engine-sdk-python==3.6.0.3). Deze is op een rhev of oVirt manager al geïnstalleerd vanuit rhev/oVirt.
+
+Maak in Zabbix bij de rhev/oVirt manager host deze macros aan:
+{$OVIRT_MANAGER_URL}
+{$OVIRT_USER}
+{$OVIRT_PASSWORD}
+
+En link nu de template 'Template Virt oVirt' aan deze host.
+De VM's worden nu automatisch gediscoverd, aangemaakt, in de groep 'Virtual machines' gehangen, gekoppeld aan het template 'Template Virt oVirt Guest'. De discoverd hosts hebben als achtervoegsel _vm.
