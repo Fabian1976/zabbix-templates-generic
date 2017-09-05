@@ -28,7 +28,15 @@ Discovery:
 Used to monitor Kafka message brokers using JMX.
 
 ### Installation
-- Place the files "/Templates JMX Kafka/jmx_discovery" and "/Templates JMX Kafka/JMXDiscovery-0.0.1.jar" in the externalscripts folder of the Zabbix-server (default location: /usr/lib/zabbix/externalscripts).
-- Import the template Templates JMX Kafka.xml into Zabbix server.
-- Add JMX interface to host.
-- Assign template to host.
+- Place the files "/Template JMX Kafka/jmx_discovery" and "/Templates JMX Kafka/JMXDiscovery-0.0.1.jar" in the externalscripts folder of the Zabbix-server (default location: /usr/lib/zabbix/externalscripts)
+- Import the template Template JMX Kafka.xml into Zabbix server
+- Add JMX interface to host
+- Assign template to host
+
+## Template Zookeeper
+Used to monitor Zookeeper nodes using mntr.
+
+### Installation
+- Place the file "Template Zookeeper/getZookeeperInfo.py" in the externalscripts folder of the Zabbix-server (default location: /usr/lib/zabbix/externalscripts)
+- Import the template Template Zookeeper.xml into Zabbix server
+- Assign template to host
