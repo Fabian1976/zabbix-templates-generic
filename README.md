@@ -23,3 +23,12 @@ Discovery:
    - Removed free disk space percentage
    - Added additional trigger for disk space usage. Also enhanced description of trigger. It now displays the disk values and host name.
    - Modifed graph from pie displaying free space to normal graphs, displaying used space
+
+## Template JMX Kafka
+Used to monitor Kafka message brokers using JMX.
+
+### Installation
+- Place the files "/Templates JMX Kafka/jmx_discovery" and "/Templates JMX Kafka/JMXDiscovery-0.0.1.jar" in the externalscripts folder of the Zabbix-server (default location: /usr/lib/zabbix/externalscripts).
+- Import the template Templates JMX Kafka.xml into Zabbix server.
+- Add JMX interface to host.
+- Assign template to host.
