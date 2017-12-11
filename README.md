@@ -40,3 +40,6 @@ Used to monitor Zookeeper nodes using mntr.
 - Place the file "Template Zookeeper/getZookeeperInfo.py" in the externalscripts folder of the Zabbix-server (default location: /usr/lib/zabbix/externalscripts)
 - Import the template Template Zookeeper.xml into Zabbix server
 - Assign template to host
+
+## Template Elasticsearch
+HOSTMACRO {$NODENAME}
