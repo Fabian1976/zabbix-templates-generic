@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template App Linux Puppet Agent</template>
-            <name>Template App Linux Puppet Agent</name>
+            <template>Template App Puppet Agent Linux</template>
+            <name>Template App Puppet Agent Linux</name>
             <description/>
             <groups>
                 <group>
@@ -77,7 +77,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template App Linux Puppet Agent:proc.num[ruby,,,puppet agent].max(#3)}=0</expression>
+            <expression>{Template App Puppet Agent Linux:proc.num[ruby,,,puppet agent].max(#3)}=0</expression>
             <name>Puppet agent not running on {HOST.NAME}</name>
             <url/>
             <status>0</status>
