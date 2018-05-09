@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.2</version>
-    <date>2016-11-11T12:36:26Z</date>
+    <version>3.4</version>
+    <date>2018-05-09T10:59:01Z</date>
     <groups>
         <group>
-            <name>Template - Servers</name>
+            <name>Custom Templates</name>
+        </group>
+        <group>
+            <name>Templates/Storage</name>
         </group>
     </groups>
     <templates>
@@ -14,7 +17,10 @@
             <description/>
             <groups>
                 <group>
-                    <name>Template - Servers</name>
+                    <name>Custom Templates</name>
+                </group>
+                <group>
+                    <name>Templates/Storage</name>
                 </group>
             </groups>
             <applications>
@@ -54,17 +60,15 @@
                     <name>FW version of Chassis</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
                     <snmp_oid>.1.3.6.1.4.1.232.22.2.3.1.1.1.8</snmp_oid>
                     <key>cpqRackCommonEnclosureFWRev.1</key>
                     <delay>72000</delay>
-                    <history>35</history>
+                    <history>35d</history>
                     <trends>0</trends>
                     <status>0</status>
                     <value_type>4</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -72,11 +76,8 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -92,22 +93,23 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>S/N of Chassis</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
                     <snmp_oid>.1.3.6.1.4.1.232.22.2.3.1.1.1.7</snmp_oid>
                     <key>cpqRackCommonEnclosureSerialNum.1</key>
                     <delay>72000</delay>
-                    <history>35</history>
+                    <history>35d</history>
                     <trends>0</trends>
                     <status>0</status>
                     <value_type>4</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -115,11 +117,8 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -135,22 +134,23 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Power redundancy state</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
                     <snmp_oid>.1.3.6.1.4.1.232.22.2.3.3.1.1.5</snmp_oid>
                     <key>cpqRackPowerEnclosureRedundant.1</key>
                     <delay>600</delay>
-                    <history>35</history>
-                    <trends>3650</trends>
+                    <history>35d</history>
+                    <trends>3650d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -158,11 +158,8 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -180,22 +177,23 @@
                         <name>HP Power redundant status</name>
                     </valuemap>
                     <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Uptime</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>1</multiplier>
                     <snmp_oid>sysUpTime.0</snmp_oid>
                     <key>sysUpTime.0</key>
                     <delay>300</delay>
-                    <history>35</history>
-                    <trends>3650</trends>
+                    <history>35d</history>
+                    <trends>3650d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>uptime</units>
-                    <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -203,11 +201,8 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>0.01</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -223,6 +218,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
+                    <preprocessing>
+                        <step>
+                            <type>1</type>
+                            <params>0.01</params>
+                        </step>
+                    </preprocessing>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
             </items>
             <discovery_rules>
@@ -242,7 +245,6 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -256,24 +258,22 @@
                         <formula/>
                         <conditions/>
                     </filter>
-                    <lifetime>1</lifetime>
+                    <lifetime>1d</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
                             <name>PN blade {#SNMPVALUE} (Slot: {#SNMPINDEX})</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.4.1.1.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackServerBladePartNumber.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>3600</delay>
-                            <history>35</history>
+                            <history>35d</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -281,11 +281,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -301,23 +298,24 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>SN blade {#SNMPVALUE} (Slot: {#SNMPINDEX})</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.4.1.1.1.16.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackServerBladeSerialNum.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>3600</delay>
-                            <history>35</history>
+                            <history>35d</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -325,11 +323,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -345,23 +340,24 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Blade state {#SNMPVALUE} (Slot: {#SNMPINDEX})</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.4.1.1.1.21.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackServerBladeStatus.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>180</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -369,11 +365,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -391,7 +384,10 @@
                                 <name>HP Server blade status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -414,6 +410,7 @@
                     </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Tepmerature sensors</name>
@@ -431,7 +428,6 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -452,24 +448,22 @@
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>1</lifetime>
+                    <lifetime>1d</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
                             <name>Temperature ({#SNMPVALUE}, ID: {#SNMPINDEX})</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.3.1.2.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackCommonEnclosureTempCurrent.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>300</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>C</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -477,11 +471,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -497,23 +488,24 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Critical temperature ({#SNMPVALUE} ID: {#SNMPINDEX})</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.3.1.2.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackCommonEnclosureTempThreshold.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>300</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>C</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -521,11 +513,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -541,7 +530,10 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -625,6 +617,7 @@
                         </graph_prototype>
                     </graph_prototypes>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Fan modules</name>
@@ -642,7 +635,6 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -656,24 +648,22 @@
                         <formula/>
                         <conditions/>
                     </filter>
-                    <lifetime>1</lifetime>
+                    <lifetime>1d</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
                             <name>Fan module state {#SNMPINDEX}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.3.1.3.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackCommonEnclosureFanCondition.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>600</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -681,11 +671,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -703,7 +690,10 @@
                                 <name>HP Enclosure fan status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -726,6 +716,7 @@
                     </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Interconnect-modules</name>
@@ -743,7 +734,6 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -757,24 +747,22 @@
                         <formula/>
                         <conditions/>
                     </filter>
-                    <lifetime>1</lifetime>
+                    <lifetime>1d</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
                             <name>PN Interconnect-module (Slot: {#SNMPINDEX})</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.6.1.1.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackNetConnectorPartNumber.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>3600</delay>
-                            <history>35</history>
+                            <history>35d</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -782,11 +770,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -802,23 +787,24 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>SN Interconnect-module (Slot: {#SNMPINDEX})</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.6.1.1.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackNetConnectorSerialNum.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>3600</delay>
-                            <history>35</history>
+                            <history>35d</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -826,11 +812,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -846,12 +829,16 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes/>
                     <graph_prototypes/>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Power units</name>
@@ -869,7 +856,6 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
                     <authtype>0</authtype>
@@ -890,24 +876,22 @@
                             </condition>
                         </conditions>
                     </filter>
-                    <lifetime>1</lifetime>
+                    <lifetime>1d</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
                             <name>Output load on PU {#SNMPINDEX}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.5.1.1.1.10.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackPowerSupplyCurPwrOutput.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>600</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>W</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -915,11 +899,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -935,23 +916,24 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>PU Input status {#SNMPINDEX}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.5.1.1.1.15.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackPowerSupplyInputLineStatus.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>600</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -959,11 +941,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -981,23 +960,24 @@
                                 <name>HP Power supply input line status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Maximum output load on PU {#SNMPINDEX}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.5.1.1.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackPowerSupplyMaxPwrOutput.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>600</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units>W</units>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1005,11 +985,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1025,23 +1002,24 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>PU Status {#SNMPINDEX}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <multiplier>0</multiplier>
                             <snmp_oid>.1.3.6.1.4.1.232.22.2.5.1.1.1.14.{#SNMPINDEX}</snmp_oid>
                             <key>cpqRackPowerSupplyStatus.[&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>600</delay>
-                            <history>35</history>
-                            <trends>3650</trends>
+                            <history>35d</history>
+                            <trends>3650d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
-                            <delta>0</delta>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1049,11 +1027,8 @@
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
                             <params/>
                             <ipmi_sensor/>
-                            <data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -1071,7 +1046,10 @@
                                 <name>HP Power supply status</name>
                             </valuemap>
                             <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
                             <application_prototypes/>
+                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -1187,6 +1165,7 @@
                         </graph_prototype>
                     </graph_prototypes>
                     <host_prototypes/>
+                    <jmx_endpoint/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
