@@ -1,0 +1,13 @@
+{
+  "name": "fabian1976-zabbix_templates_generic",
+  "version": "0.2.0",
+  "author": "Fabian van der Hoeven",
+  "summary": "Some Zabbix generic templates",
+  "license": "proprietary",
+  "source": "https://github.com/Fabian1976/zabbix-templates-generic",
+  "project_page": "https://github.com/Fabian1976/zabbix-templates-generic",
+  "issues_url": "https://github.com/Fabian1976/zabbix-templates-generic/issues",
+  "dependencies": [],
+  "operatingsystem_support": [],
+  "requirements": []
+}
